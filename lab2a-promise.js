@@ -8,16 +8,28 @@ function flip() {
     return p;
 }
 
-//// Add code here that will "flip" the coin ten times and write the 
+//// Add code here that will "flip" the coin ten times and write the
 //// result to the console (e.g. "Heads" or "Tails" for each flip).
 
-
+// two pluses mean that it will keep going... number will get bigger until 10
+for (let i = 0; i < 10; i++) {
+    flip().then(
+        () => {console.log("Heads!")},
+        () => {console.log("Tails!")}
+    );
+}
 
 
 ///// Problem 2 - More fun...
 
+// Add code here that returns a Promise that will resolve after it has counted to bignum
 function countBig(bignum) {
-    // Add code here that returns a Promise that will resolve after it has counted to bignum
+  let p = new Promise(function (resolve, reject) {
+    for (let i = 0; i < bignum; i++) {
+    if (i = bignum-1) resolve();
+    else reject();
+  }})
+  return p
 }
 
 
